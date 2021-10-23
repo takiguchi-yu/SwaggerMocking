@@ -1,0 +1,3 @@
+gen/out/nodejs-server/
+gen/out/openapi/
+!.gitkeep

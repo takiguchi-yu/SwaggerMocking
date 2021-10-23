@@ -1,0 +1,36 @@
+openapi: '3.0.2'
+info:
+  title: 簡単なAPI
+  version: '1.0.0'
+servers:
+- url: http://localhost:49160/v1
+externalDocs:
+  description: Find out more about Swagger
+  url: https://swagger.io/specification/
+tags:
+- name: List
+  description: 一覧画面で使うAPI
+paths:
+  /list:
+    get:
+      tags:
+      - List
+      summary: 一覧情報を取得するAPI
+      operationId: getList
+      parameters:
+      - name: listId
+        in: query
+        description: 一覧ID
+        schema:
+          type: string
+      responses:
+        '200':
+          description: 処理成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: '200'
